@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Jannat Marriage Hall Chapra | Best Banquet & Wedding Venue in Bihar</title>
+  <meta name="description" content="Book Jannat Marriage Hall, the premier luxury banquet hall in Chapra, Bihar for weddings, grand receptions, and family celebrations. Full AC hall, catering, parking & modern amenities.">
+  <meta name="keywords" content="Jannat Marriage Hall Chapra, Banquet Hall in Chapra, Marriage Hall Bus Stand Road Chapra, Wedding Venue Bihar, Wedding Hall Booking Chapra">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Jannat Marriage Hall - Grand Wedding & Event Venue in Chapra">
+  <meta property="og:description" content="Celebrate grandeur at Jannat Marriage Hall, Bus Stand Road, Chapra, Bihar. Luxury banquet hall for your dream weddings.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:locale" content="hi_IN">
+
+  <!-- Local Business Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BanquetHall",
+    "name": "Jannat Marriage Hall",
+    "image": "https://i.ibb.co/vz4B59P/jannat-cover.jpg",
+    "telephone": "+919431472993",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bus Stand Road, Sadhnapuri, Sadhapur",
+      "addressLocality": "Chapra",
+      "addressRegion": "Bihar",
+      "postalCode": "841301",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.7831,
+      "longitude": 84.7462
+    },
+    "url": "https://maps.app.goo.gl/7NutbrNWAXjCsQYs8",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:30",
+      "closes": "23:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "reviewCount": "204"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Firebase SDK v8 (Compat) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              950: '#040705',
+              900: '#070d0a',
+              800: '#0d1813',
+              700: '#14251d',
+              600: '#1c3328'
+            },
+            gold: {
+              300: '#f6e09e',
+              400: '#eec75d',
+              500: '#d4af37',
+              600: '#aa8c2c'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #040705;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    .font-royal {
+      font-family: 'Cinzel', serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fff2cc 0%, #d4af37 50%, #aa8c2c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+    }
+    /* Smooth Preloader animation */
+    #introLoader.hide {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    }
+  </style>
+</head>
+<body class="selection:bg-gold-500 selection:text-black">
+
+  <!-- ================= LUXURY INTRO PRELOADER ================= -->
+  <div id="introLoader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-royal-950 transition-all duration-700">
+    <div class="relative flex items-center justify-center mb-6">
+      <div class="w-24 h-24 rounded-full border-2 border-gold-500/20 border-t-gold-400 animate-spin"></div>
+      <div id="loaderLogo" class="absolute w-16 h-16 rounded-full bg-gold-500/10 border border-gold-500/40 flex items-center justify-center text-gold-400 font-royal font-bold text-xl overflow-hidden">
+        JM
+      </div>
+    </div>
+    <h2 class="font-royal text-xl sm:text-2xl font-bold tracking-widest gold-gradient-text uppercase">Jannat Marriage Hall</h2>
+    <p class="text-xs text-gold-400/80 tracking-widest mt-1">CHAPRA, BIHAR</p>
+  </div>
+
+  <!-- ================= TOP CONTACT STRIP ================= -->
+  <div class="bg-royal-950/90 border-b border-gold-500/20 text-xs text-gray-300 py-1.5 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-[11px] sm:text-xs">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-gold-400">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>Opens 10:30 AM Daily</span>
+        </span>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <a id="topPhoneLink" href="tel:09431472993" class="flex items-center gap-1.5 hover:text-gold-300 transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span id="topPhoneText">+91 094314 72993</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a id="topSocialInsta" href="#" target="_blank" class="hover:text-gold-400 transition" title="Instagram">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+        </a>
+        <a id="topSocialFb" href="#" target="_blank" class="hover:text-gold-400 transition" title="Facebook">
+          <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+        </a>
+        <a id="topSocialWa" href="https://wa.me/919431472993" target="_blank" class="hover:text-emerald-400 text-emerald-500 transition" title="WhatsApp">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVBAR (SINGLE-LINE MOBILE HEADER) ================= -->
+  <header class="sticky top-0 z-40 bg-royal-900/90 backdrop-blur-xl border-b border-gold-500/20 px-3 sm:px-8 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      
+      <!-- Brand Logo & Name (Guaranteed Single Line) -->
+      <a href="#" class="flex items-center gap-2 sm:gap-3 shrink min-w-0">
+        <div id="navLogoWrap" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gold-500/10 border border-gold-500/50 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+          <span id="navLogoFallback" class="text-gold-400 font-royal font-bold text-xs sm:text-sm">JM</span>
+        </div>
+        <div class="truncate">
+          <span id="navHallTitle" class="font-royal font-bold text-sm sm:text-lg md:text-xl text-white tracking-wider whitespace-nowrap block truncate">
+            Jannat Marriage Hall
+          </span>
+          <span class="hidden sm:block text-[10px] text-gold-400/90 tracking-widest uppercase">Banquet & Wedding Venue &bull; Chapra</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-gray-300">
+        <a href="#about" class="hover:text-gold-400 transition">About Hall</a>
+        <a href="#gallery" class="hover:text-gold-400 transition">Gallery</a>
+        <a href="#videos" class="hover:text-gold-400 transition">Tour Video</a>
+        <a href="#amenities" class="hover:text-gold-400 transition">Amenities</a>
+        <a href="#location" class="hover:text-gold-400 transition">Location</a>
+      </nav>
+
+      <!-- Action Button & Mobile Menu Toggle -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="#booking" class="px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-black font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-gold-500/20 hover:scale-[1.03] active:scale-95 transition whitespace-nowrap flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>Check Dates</span>
+        </a>
+        <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-xl bg-royal-800 border border-gold-500/30 text-gold-400" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Nav Menu -->
+    <div id="mobileDropdown" class="hidden lg:hidden mt-3 pt-3 border-t border-white/10 space-y-2 text-xs font-medium text-gray-300">
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 px-3 rounded-lg hover:bg-royal-800 hover:text-gold-400">About Hall</a>
+      <a href="#gallery" onclick="toggleMobileNav()" class="block py-2 px-3 rounded-lg hover:bg-royal-800 hover:text-gold-400">Photo Gallery</a>
+      <a href="#videos" onclick="toggleMobileNav()" class="block py-2 px-3 rounded-lg hover:bg-royal-800 hover:text-gold-400">Video Tour</a>
+      <a href="#amenities" onclick="toggleMobileNav()" class="block py-2 px-3 rounded-lg hover:bg-royal-800 hover:text-gold-400">Amenities & Services</a>
+      <a href="#location" onclick="toggleMobileNav()" class="block py-2 px-3 rounded-lg hover:bg-royal-800 hover:text-gold-400">Satellite Map & Directions</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative min-h-[82vh] flex items-center justify-center px-4 py-16 overflow-hidden">
+    <!-- Ambient Glow Background -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,37,29,0.9)_0%,#040705_80%)]"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+      
+      <!-- Verified Google Rating Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royal-800/80 border border-gold-500/40 text-gold-300 text-xs shadow-md">
+        <span class="flex text-amber-400">★★★★☆</span>
+        <span class="font-bold text-white">4.0</span>
+        <span class="text-gray-400">(204+ Google Reviews)</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      </div>
+
+      <h1 class="font-royal text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide uppercase leading-tight">
+        <span class="text-white block">Celebrate Grandeur At</span>
+        <span id="heroHallName" class="gold-gradient-text block mt-1">Jannat Marriage Hall</span>
+      </h1>
+
+      <p id="heroTagline" class="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+        Step into Jannat Marriage Hall, where your dream celebrations come to life! Chapra’s premier luxury venue for weddings, lavish receptions, sangeet, and gala family gatherings.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-gold-600 to-gold-400 text-black font-bold text-sm tracking-wide shadow-xl shadow-gold-500/20 hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Book Hall For Your Event</span>
+        </a>
+        <a id="heroMapBtn" href="https://maps.app.goo.gl/7NutbrNWAXjCsQYs8" target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-royal-800 hover:bg-royal-700 text-gold-300 font-semibold text-sm border border-gold-500/40 transition flex items-center justify-center gap-2">
+          <i data-lucide="navigation" class="w-4 h-4 text-gold-400"></i>
+          <span>Get Directions (Map)</span>
+        </a>
+      </div>
+
+      <!-- Quick Feature Pills -->
+      <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+        <div class="bg-royal-900/60 border border-white/10 rounded-2xl p-3 flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+            <i data-lucide="wind" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Full AC Hall</h4>
+            <p class="text-[10px] text-gray-400">Spacious & Modern</p>
+          </div>
+        </div>
+        <div class="bg-royal-900/60 border border-white/10 rounded-2xl p-3 flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+            <i data-lucide="users" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">1000+ Guests</h4>
+            <p class="text-[10px] text-gray-400">Grand Capacity</p>
+          </div>
+        </div>
+        <div class="bg-royal-900/60 border border-white/10 rounded-2xl p-3 flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+            <i data-lucide="utensils" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Catering Area</h4>
+            <p class="text-[10px] text-gray-400">Buffet & Dining Setup</p>
+          </div>
+        </div>
+        <div class="bg-royal-900/60 border border-white/10 rounded-2xl p-3 flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Prime Location</h4>
+            <p class="text-[10px] text-gray-400">Bus Stand Road, Chapra</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-16 px-4 sm:px-8 border-t border-white/5 bg-royal-900/40">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-5">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold text-gold-400 uppercase tracking-widest">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Welcome to Jannat</span>
+        </div>
+        <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white leading-snug">
+          Where Special Memories Turn Into A Royal Celebration
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+          Located conveniently near Bus Stand Road, Sadhnapuri in Chapra, Jannat Marriage Hall offers an unmatched ambiance for weddings, receptions, engagements, anniversary celebrations, and corporate gatherings.
+        </p>
+        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+          From exquisite stage decor and high-ceiling architecture to modern illumination, pristine dining spaces, and dedicated bridal suites, every element is designed to offer peace of mind and an unforgettable experience for you and your honorable guests.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="border-l-2 border-gold-500 pl-3">
+            <span class="text-xl sm:text-2xl font-bold font-royal text-white">100%</span>
+            <p class="text-[11px] text-gray-400">Power Backup Facility</p>
+          </div>
+          <div class="border-l-2 border-gold-500 pl-3">
+            <span class="text-xl sm:text-2xl font-bold font-royal text-white">Ample</span>
+            <p class="text-[11px] text-gray-400">Guest Parking Space</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-royal-800/60 border border-gold-500/20 rounded-3xl p-6 sm:p-8 space-y-5 shadow-2xl">
+        <h3 class="font-royal text-lg font-bold text-gold-300">Location Highlights</h3>
+        <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+            <span id="aboutAddress">Bus Stand Road, Sadhnapuri, Sadhapur, Chapra, Bihar 841301</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="building" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+            <span>Located conveniently in Shopping Complex premise</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="car" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+            <span>Direct access from main highway with smooth transit</span>
+          </li>
+        </ul>
+        <div class="pt-2">
+          <a id="aboutMapDirect" href="https://maps.app.goo.gl/7NutbrNWAXjCsQYs8" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:text-gold-300">
+            <span>गूगल मैप पर लोकेशन देखें</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PHOTO GALLERY (ZERO HARDCODED DUMMY PHOTOS) ================= -->
+  <section id="gallery" class="py-16 px-4 sm:px-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2 max-w-2xl mx-auto">
+        <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Real Moments</span>
+        <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white">फोटो गैलरी (Photo Gallery)</h2>
+        <p class="text-xs text-gray-400">हॉल के वास्तविक इवेंट्स, डेकोरेशन और भव्य वातावरण की तस्वीरें</p>
+      </div>
+
+      <!-- Live Dynamic Gallery Grid from Firebase RTDB -->
+      <div id="galleryContainer" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Dynamic Items will be rendered here -->
+      </div>
+
+      <!-- Clean Empty State (When no photos uploaded yet) -->
+      <div id="galleryEmptyNotice" class="hidden text-center py-16 px-6 bg-royal-900/60 border border-gold-500/20 rounded-3xl max-w-lg mx-auto space-y-3">
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400">
+          <i data-lucide="camera" class="w-7 h-7"></i>
+        </div>
+        <h4 class="font-royal text-base font-bold text-white">तस्वीरें जल्द ही अपडेट होंगी</h4>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          वर्तमान में गैलरी अपडेट की जा रही है। हॉल की लेटेस्ट तस्वीरें देखने या विज़िट करने के लिए हमें सीधे संपर्क करें।
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VIDEO TOUR SECTION (CLOUDINARY) ================= -->
+  <section id="videos" class="py-16 px-4 sm:px-8 border-t border-white/5 bg-royal-900/40">
+    <div class="max-w-7xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2 max-w-2xl mx-auto">
+        <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Virtual Walkthrough</span>
+        <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white">हॉल का वीडियो टूर (Video Tour)</h2>
+        <p class="text-xs text-gray-400">घर बैठे जन्नत मैरिज हॉल की भव्यता और शानदार व्यवस्था का वीडियो देखें</p>
+      </div>
+
+      <div id="videoContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamic Cloudinary Videos will be rendered here -->
+      </div>
+
+      <!-- Empty State for Video -->
+      <div id="videoEmptyNotice" class="hidden text-center py-12 px-6 bg-royal-900/60 border border-gold-500/20 rounded-3xl max-w-md mx-auto">
+        <i data-lucide="video" class="w-10 h-10 mx-auto text-gold-500/50 mb-2"></i>
+        <p class="text-xs text-gray-400">हॉल का नया वॉकथ्रू वीडियो जल्द अपलोड किया जाएगा।</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= AMENITIES SECTION ================= -->
+  <section id="amenities" class="py-16 px-4 sm:px-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto space-y-10">
+      
+      <div class="text-center space-y-2 max-w-2xl mx-auto">
+        <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Premium Facilities</span>
+        <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white">सुविधाएं एवं विशेषताएं</h2>
+        <p class="text-xs text-gray-400">आपकी शादी और पार्टी को निर्बाध व शानदार बनाने के लिए सभी आधुनिक सुविधाएं उपलब्ध हैं</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">शाही स्टेज व मंडप डेकोरेशन</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">वर-वधू के लिए भव्य राजसी स्टेज और पारंपरिक व आधुनिक फूलों की मनमोहक सजावट।</p>
+        </div>
+
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="snowflake" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">केंद्रीकृत एयर कंडीशनिंग (Full AC)</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">हर मौसम में आपके मेहमानों के पूर्ण आराम के लिए विशाल हॉल में पावरफुल एसी की सुविधा।</p>
+        </div>
+
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="coffee" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">विशाल डाइनिंग व कैटरिंग एरिया</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">हाइजीनिक बुफे सेटअप और सैकड़ों मेहमानों के एक साथ सुगमता से भोजन करने की उत्तम व्यवस्था।</p>
+        </div>
+
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">24x7 हैवी जेनरेटर पावर बैकअप</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">इवेंट के दौरान बिजली कटने की कोई चिंता नहीं, निरंतर रोशनी और एसी की गारंटी।</p>
+        </div>
+
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="home" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">दुल्हन व परिवार के लिए AC रूम्स</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">तैयारी और विश्राम के लिए अटैच्ड वॉशरूम युक्त सुरक्षित व आरामदायक निजी कमरे।</p>
+        </div>
+
+        <div class="bg-royal-900/70 border border-white/10 hover:border-gold-500/40 rounded-2xl p-5 space-y-3 transition">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-sm">सुरक्षा व सीसीटीवी निगरानी</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">परिसर में 24 घंटे सुरक्षा गार्ड्स और आधुनिक हाई-डेफिनिशन कैमरों द्वारा कड़ी निगरानी।</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BOOKING INQUIRY SECTION ================= -->
+  <section id="booking" class="py-16 px-4 sm:px-8 border-t border-white/5 bg-royal-900/60">
+    <div class="max-w-4xl mx-auto bg-royal-800/90 border border-gold-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      
+      <div class="text-center space-y-2 mb-8">
+        <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Reserve Your Date</span>
+        <h2 class="font-royal text-2xl sm:text-3xl font-bold text-white">तारीख की उपलब्धता व बुकिंग इन्क्वायरी</h2>
+        <p class="text-xs text-gray-400">अपनी पसंदीदा तारीख बुक करने के लिए फॉर्म भरें। हमारी टीम तुरंत आपसे संपर्क करेगी।</p>
+      </div>
+
+      <form id="bookingForm" onsubmit="submitBooking(event)" class="space-y-4">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-1">आपका नाम (Full Name) *</label>
+            <input type="text" id="bookName" required placeholder="उदा. राहुल कुमार" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-1">मोबाइल नंबर (Phone Number) *</label>
+            <input type="tel" id="bookPhone" required placeholder="उदा. 9876543210" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-1">इवेंट का प्रकार (Event Type)</label>
+            <select id="bookEventType" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none">
+              <option value="Marriage">शादी (Wedding)</option>
+              <option value="Reception">रिसेप्शन (Reception)</option>
+              <option value="Engagement">सगाई (Ring Ceremony)</option>
+              <option value="Sangeet/Mehendi">संगीत / मेहंदी</option>
+              <option value="Birthday/Anniversary">सालगिरह / जन्मदिन</option>
+              <option value="Corporate/Other">अन्य कार्यक्रम</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-1">इवेंट की तारीख (Event Date) *</label>
+            <input type="date" id="bookDate" required class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-300 mb-1">अनुमानित मेहमान (Guests)</label>
+            <input type="number" id="bookGuests" placeholder="उदा. 500" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-gray-300 mb-1">अतिरिक्त जानकारी या आवश्यकताएं (Optional Message)</label>
+          <textarea id="bookNotes" rows="3" placeholder="कैटरिंग, रूम्स या विशेष सजावट के बारे में कुछ लिखना चाहें..." class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-gold-500 outline-none resize-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p id="bookingStatusMsg" class="text-xs text-gold-400 font-medium"></p>
+          <button type="submit" id="bookingSubmitBtn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-black font-bold text-xs tracking-wider shadow-lg shadow-gold-500/20 hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>बुकिंग रिक्वेस्ट भेजें (Submit)</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= SATELLITE GOOGLE MAP PREVIEW ================= -->
+  <section id="location" class="py-16 px-4 sm:px-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Interactive Aerial View</span>
+          <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white">सैटेलाइट मैप एवं लोकेशन</h2>
+          <p id="mapAddressSub" class="text-xs text-gray-400 mt-1">Bus Stand Road, Sadhnapuri, Sadhapur, Chapra, Bihar 841301</p>
+        </div>
+        <a id="openGoogleMapsBtn" href="https://maps.app.goo.gl/7NutbrNWAXjCsQYs8" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-royal-800 hover:bg-gold-500 hover:text-black text-gold-300 text-xs font-bold border border-gold-500/30 transition shrink-0">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>गूगल मैप्स में खोलें (Open in App)</span>
+        </a>
+      </div>
+
+      <!-- Live Satellite Mode Map Container -->
+      <div class="w-full h-80 sm:h-[420px] rounded-3xl overflow-hidden border border-gold-500/30 shadow-2xl relative bg-royal-900">
+        <iframe 
+          id="satelliteMapIframe"
+          src="https://maps.google.com/maps?q=Jannat+Marriage+Hall+Chapra+Bihar&t=k&z=17&ie=UTF8&iwloc=&output=embed" 
+          class="w-full h-full border-0" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-royal-950 border-t border-gold-500/20 py-12 px-4 sm:px-8 text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/5">
+      
+      <div class="space-y-3">
+        <h3 id="footerHallTitle" class="font-royal text-lg font-bold text-white tracking-wider">Jannat Marriage Hall</h3>
+        <p class="text-gray-400 leading-relaxed">
+          छपरा का सबसे पसंदीदा व भव्य मैरिज हॉल। आपके हर उत्सव को यादगार बनाने के लिए समर्पित।
+        </p>
+        <p class="text-[11px] text-gold-400">Banquet Hall &bull; Wedding Venue &bull; Chapra</p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase text-xs tracking-wider">त्वरित संपर्क (Contact Us)</h4>
+        <div class="space-y-2">
+          <p class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500"></i>
+            <span id="footerPhone">094314 72993</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-500"></i>
+            <span id="footerEmail">info@jannatmarriagehall.com</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5"></i>
+            <span id="footerAddress">Bus Stand Road, Sadhnapuri, Chapra, Bihar 841301</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase text-xs tracking-wider">सोशल मीडिया</h4>
+        <p class="text-xs text-gray-400">हॉल के नए अपडेट्स और वीडियो देखने के लिए हमें फॉलो करें:</p>
+        <div class="flex items-center gap-3">
+          <a id="footerInsta" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-royal-800 border border-white/10 flex items-center justify-center hover:text-gold-400 hover:border-gold-500/40 transition">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a id="footerFb" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-royal-800 border border-white/10 flex items-center justify-center hover:text-gold-400 hover:border-gold-500/40 transition">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a id="footerWa" href="https://wa.me/919431472993" target="_blank" class="w-9 h-9 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 flex items-center justify-center hover:bg-emerald-800/80 transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-gray-400">
+      <p>&copy; <span id="currentYear"></span> Jannat Marriage Hall. सर्वाधिकार सुरक्षित।</p>
+      <a href="admin.html" target="_blank" class="text-gray-400 hover:text-gold-400/80 text-[10px] flex items-center gap-1 transition">
+        <i data-lucide="lock" class="w-3 h-3"></i>
+        <span>एडमिन पोर्टल</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating Direct WhatsApp Button -->
+  <a id="floatingWhatsApp" href="https://wa.me/919431472993" target="_blank" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition" aria-label="Chat on WhatsApp">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+    // ==========================================
+    // 1. FIREBASE CONFIG (SINGAPORE REGION RTDB)
+    // ==========================================
+    const firebaseConfig = {
+      apiKey: "AIzaSyDuB0sopR1iCd-yglm4QpovxCFR27I-54A",
+      authDomain: "marraige-halll-chapra.firebaseapp.com",
+      // सिंगापुर रीजन का सही URL:
+      databaseURL: "https://marraige-halll-chapra-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "marraige-halll-chapra",
+      storageBucket: "marraige-halll-chapra.firebasestorage.app",
+      messagingSenderId: "752025205913",
+      appId: "1:752025205913:web:b4ed96ae6c056309accc08"
+    };
+
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    const db = firebase.database();
+
+    // ==========================================
+    // 2. DISMISS INTRO PRELOADER
+    // ==========================================
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("introLoader");
+        if (loader) {
+          loader.classList.add("hide");
+          setTimeout(() => loader.remove(), 800);
+        }
+      }, 500);
+    });
+
+    function toggleMobileNav() {
+      const drop = document.getElementById("mobileDropdown");
+      drop.classList.toggle("hidden");
+    }
+
+    // ==========================================
+    // 3. REALTIME SYNC: SITE SETTINGS (CMS)
+    // ==========================================
+    db.ref("site_settings").on("value", (snap) => {
+      const data = snap.val();
+      if (!data) return;
+
+      // Hall Name
+      if (data.hallName) {
+        document.getElementById("navHallTitle").innerText = data.hallName;
+        document.getElementById("heroHallName").innerText = data.hallName;
+        document.getElementById("footerHallTitle").innerText = data.hallName;
+      }
+
+      // Tagline
+      if (data.tagline) {
+        document.getElementById("heroTagline").innerText = data.tagline;
+      }
+
+      // Phone
+      if (data.phone) {
+        document.getElementById("topPhoneText").innerText = data.phone;
+        document.getElementById("topPhoneLink").href = `tel:${data.phone.replace(/[^0-9+]/g, '')}`;
+        document.getElementById("footerPhone").innerText = data.phone;
+      }
+
+      // WhatsApp
+      if (data.whatsapp) {
+        const cleanWa = data.whatsapp.replace(/[^0-9]/g, '');
+        const waUrl = `https://wa.me/${cleanWa}`;
+        document.getElementById("topSocialWa").href = waUrl;
+        document.getElementById("footerWa").href = waUrl;
+        document.getElementById("floatingWhatsApp").href = waUrl;
+      }
+
+      // Email
+      if (data.email) {
+        document.getElementById("footerEmail").innerText = data.email;
+      }
+
+      // Address
+      if (data.address) {
+        document.getElementById("aboutAddress").innerText = data.address;
+        document.getElementById("mapAddressSub").innerText = data.address;
+        document.getElementById("footerAddress").innerText = data.address;
+      }
+
+      // Social Media
+      if (data.instagram) {
+        document.getElementById("topSocialInsta").href = data.instagram;
+        document.getElementById("footerInsta").href = data.instagram;
+      }
+      if (data.facebook) {
+        document.getElementById("topSocialFb").href = data.facebook;
+        document.getElementById("footerFb").href = data.facebook;
+      }
+
+      // Map Links
+      if (data.mapLink) {
+        document.getElementById("heroMapBtn").href = data.mapLink;
+        document.getElementById("aboutMapDirect").href = data.mapLink;
+        document.getElementById("openGoogleMapsBtn").href = data.mapLink;
+      }
+      if (data.mapEmbed) {
+        document.getElementById("satelliteMapIframe").src = data.mapEmbed;
+      }
+
+      // Logo Sync
+      if (data.logo) {
+        const logoImg = `<img src="${data.logo}" alt="Logo" class="w-full h-full object-cover">`;
+        document.getElementById("navLogoWrap").innerHTML = logoImg;
+        const loaderLogo = document.getElementById("loaderLogo");
+        if (loaderLogo) loaderLogo.innerHTML = logoImg;
+      }
+    });
+
+    // ==========================================
+    // 4. REALTIME SYNC: PHOTO GALLERY (ZERO DUMMY)
+    // ==========================================
+    db.ref("gallery_images").on("value", (snap) => {
+      const container = document.getElementById("galleryContainer");
+      const emptyNotice = document.getElementById("galleryEmptyNotice");
+      container.innerHTML = "";
+
+      if (!snap.exists()) {
+        emptyNotice.classList.remove("hidden");
+        return;
+      }
+
+      emptyNotice.classList.add("hidden");
+
+      snap.forEach(child => {
+        const item = child.val();
+        const card = document.createElement("div");
+        card.className = "group relative rounded-2xl overflow-hidden bg-royal-800/80 border border-gold-500/20 aspect-square cursor-pointer";
+        card.innerHTML = `
+          <img src="${item.url}" alt="${item.title || 'Jannat Marriage Hall'}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
+            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-wider">${item.category || 'Celebration'}</span>
+            <span class="text-xs font-semibold text-white truncate">${item.title || 'Jannat Marriage Hall'}</span>
+          </div>
+        `;
+        // Lightbox trigger on click
+        card.addEventListener('click', () => window.open(item.url, '_blank'));
+        container.prepend(card);
+      });
+
+      lucide.createIcons();
+    });
+
+    // ==========================================
+    // 5. REALTIME SYNC: VIDEOS (CLOUDINARY)
+    // ==========================================
+    db.ref("videos").on("value", (snap) => {
+      const container = document.getElementById("videoContainer");
+      const emptyNotice = document.getElementById("videoEmptyNotice");
+      container.innerHTML = "";
+
+      if (!snap.exists()) {
+        emptyNotice.classList.remove("hidden");
+        return;
+      }
+
+      emptyNotice.classList.add("hidden");
+
+      snap.forEach(child => {
+        const item = child.val();
+        const card = document.createElement("div");
+        card.className = "bg-royal-800/80 border border-gold-500/20 rounded-2xl p-3 flex flex-col justify-between";
+        card.innerHTML = `
+          <div class="rounded-xl overflow-hidden bg-black aspect-video mb-3 relative">
+            <video src="${item.url}" controls preload="metadata" class="w-full h-full object-cover"></video>
+          </div>
+          <p class="text-xs font-semibold text-white truncate px-1">${item.title || 'Hall Video Tour'}</p>
+        `;
+        container.prepend(card);
+      });
+
+      lucide.createIcons();
+    });
+
+    // ==========================================
+    // 6. EVENT BOOKING SUBMISSION ENGINE
+    // ==========================================
+    function submitBooking(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("bookName").value.trim();
+      const phone = document.getElementById("bookPhone").value.trim();
+      const eventType = document.getElementById("bookEventType").value;
+      const eventDate = document.getElementById("bookDate").value;
+      const guests = document.getElementById("bookGuests").value.trim();
+      const notes = document.getElementById("bookNotes").value.trim();
+      const statusMsg = document.getElementById("bookingStatusMsg");
+      const btn = document.getElementById("bookingSubmitBtn");
+
+      btn.disabled = true;
+      statusMsg.innerText = "रिक्वेस्ट सबमिट हो रही है...";
+
+      const bookingPayload = {
+        name,
+        phone,
+        eventType,
+        eventDate,
+        guests: guests || "Not specified",
+        notes: notes || "No additional notes",
+        status: "Pending",
+        dateSubmitted: firebase.database.ServerValue.TIMESTAMP
+      };
+
+      db.ref("bookings").push(bookingPayload)
+        .then(() => {
+          statusMsg.innerText = "आपकी बुकिंग रिक्वेस्ट प्राप्त हो गई है! धन्यवाद।";
+          document.getElementById("bookingForm").reset();
+
+          // Instant WhatsApp Follow-up Option
+          const msg = `नमस्ते Jannat Marriage Hall, मैंने वेबसाइट से बुकिंग रिक्वेस्ट भेजी है:%0A- नाम: ${name}%0A- तारीख: ${eventDate}%0A- कार्यक्रम: ${eventType}%0A- मेहमान: ${guests || 'N/A'}`;
+          setTimeout(() => {
+            if (confirm("बुकिंग रिक्वेस्ट सुरक्षित हो गई है! क्या आप हॉल मैनेजर को व्हाट्सएप पर भी मैसेज भेजना चाहते हैं?")) {
+              window.open(`https://wa.me/919431472993?text=${msg}`, '_blank');
+            }
+          }, 300);
+        })
+        .catch(err => {
+          statusMsg.innerText = "एरर: " + err.message;
+        })
+        .finally(() => {
+          btn.disabled = false;
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+  </html>
